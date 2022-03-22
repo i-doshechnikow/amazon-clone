@@ -27,6 +27,26 @@ function Header() {
           />
           <SearchIcon className="h-12 p-4" />
         </div>
+
+        <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
+          <div className="link">
+            <p>hello director</p>
+            <p className="font-extrabold md:text-sm">Account & Lists</p>
+          </div>
+          <div className="link">
+            <p>Returns</p>
+            <p className="font-extrabold md:text-sm">& Orders</p>
+          </div>
+          <div className="relative link flex items-center">
+            <span className="absolute bg-yellow-400 rounded-full top-0 right-0 md:right-10 h-4 w-4 pl-1 text-black font-bold">
+              4
+            </span>
+            <ShoppingCartIcon className="h-10" />
+            <p className="hidden font-extrabold md:text-sm md:inline mt-2">
+              Basket
+            </p>
+          </div>
+        </div>
       </div>
       {/* bottom nav */}
       <div></div>
