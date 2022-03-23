@@ -8,7 +8,6 @@ import {
 function Header() {
   return (
     <header>
-      {/* top nav */}
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
@@ -19,7 +18,7 @@ function Header() {
             className="cursor-pointer"
           />
         </div>
-        {/* search element */}
+
         <div className="bg-yellow-400 hover:bg-yellow-500 items-center h-10 rounded-md flex-grow cursor-pointer hidden sm:flex">
           <input
             type="text"
@@ -48,7 +47,7 @@ function Header() {
           </div>
         </div>
       </div>
-      {/* bottom nav */}
+
       <div className="flex space-x-3 p-2 pl-6 items-center bg-amazon_blue-light text-white text-sm">
         <p className="flex link items-center">
           <MenuIcon className="h-6 mr-1" />
