@@ -4,7 +4,9 @@ function checkout() {
   return <div className="bg-gray-100">
     <Header />
 
-    <h1>CHECKOUT PAGE</h1>
+    <main className="lg:flex max-w-screen-xl mx-auto">
+      <h1>test</h1>
+    </main>
   </div>;
 }
 
