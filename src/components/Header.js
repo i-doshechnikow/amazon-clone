@@ -7,12 +7,16 @@ import {
 
 import { useSession, signIn, signOut } from "next-auth/react";
 
+import { useRouter } from 'next/router'
+
 function Header() {
+  const router = useRouter()
   return (
     <header>
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
+            onClick={() => { router.push('/') }}
             src="https://links.papareact.com/f90"
             width={150}
             height={40}
@@ -38,9 +42,9 @@ function Header() {
             <p>Returns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
-          <div className="relative link flex items-center">
+          <div onClick={() => { router.push('/checkout') }} className="relative link flex items-center">
             <span className="absolute bg-yellow-400 rounded-full top-0 right-0 md:right-10 h-4 w-4 pl-1 text-black font-bold">
-              4
+              0
             </span>
             <ShoppingCartIcon className="h-10" />
             <p className="hidden font-extrabold md:text-sm md:inline mt-2">
