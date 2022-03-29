@@ -8,9 +8,14 @@ import {
 import { useSession, signIn, signOut } from "next-auth/react";
 
 import { useRouter } from 'next/router'
+import { useSelector } from "react-redux";
+import { selectItems } from "../slices/basketSlice";
 
 function Header() {
   const router = useRouter()
+
+  const items = useSelector(selectItems);
+
   return (
     <header>
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
@@ -44,7 +49,7 @@ function Header() {
           </div>
           <div onClick={() => { router.push('/checkout') }} className="relative link flex items-center">
             <span className="absolute bg-yellow-400 rounded-full top-0 right-0 md:right-10 h-4 w-4 pl-1 text-black font-bold">
-              0
+              {items.length}
             </span>
             <ShoppingCartIcon className="h-10" />
             <p className="hidden font-extrabold md:text-sm md:inline mt-2">
