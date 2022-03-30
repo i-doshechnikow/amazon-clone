@@ -23,7 +23,7 @@ function checkout() {
 
         <div className="flex flex-col p-5 space-y-10 bg-white">
           <h1 className="text-3xl border-b pb-4">{items.length ? `There are ${items.length} item(s) in your basket` : 'Your Shopping Basket Is Empty'}</h1>
-          {items.map((element, id) => (<CheckoutProduct key={id} />))}
+          {items.map((element, id) => (<CheckoutProduct key={id} productInfo={element} />))}
         </div>
 
       </div>
