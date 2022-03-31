@@ -22,9 +22,6 @@ export const basketSlice = createSlice({
       }
 
       state.items = newBasket
-      // console.log('state', state)
-      // console.log('action.payload', action.payload)
-      // state.items = state.items.filter(el => el.id !== action.payload.id)
     },
   },
 });
