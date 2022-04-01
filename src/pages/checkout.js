@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useSelector } from "react-redux";
+import Currency from 'react-currency-formatter'
 import CheckoutProduct from "../components/CheckoutProduct";
 import Header from "../components/Header";
 import Product from "../components/Product";
@@ -7,7 +8,7 @@ import { selectItems } from "../slices/basketSlice";
 
 function checkout() {
   const items = useSelector(selectItems);
-
+  const total = items.reduce((acc, el) => el.price + acc, 0);
   return <div className="bg-gray-100">
     <Header />
 
@@ -29,7 +30,17 @@ function checkout() {
       </div>
 
       {/* right */}
-      <div></div>
+      <div>
+        {items.length > 0 && (
+          <>
+            <h2>Subtotal {items.length} item(s):
+              <span>
+                <Currency quantity={total} currency='GBP' />
+              </span>
+            </h2>
+          </>
+        )}
+      </div>
     </main>
   </div>;
 }
