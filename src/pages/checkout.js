@@ -30,14 +30,15 @@ function checkout() {
       </div>
 
       {/* right */}
-      <div>
+      <div className="flex flex-col bg-white p-2">
         {items.length > 0 && (
           <>
-            <h2>Subtotal {items.length} item(s):
-              <span>
+            <h2 className="whitespace-nowrap">Subtotal {items.length} item(s):
+              <span className="font-bold">
                 <Currency quantity={total} currency='GBP' />
               </span>
             </h2>
+            <button className='button mt-2'>Checkout</button>
           </>
         )}
       </div>
